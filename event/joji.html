@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <title>joji</title>
+    </head>
+    <body>
+        <h1>joji</h1>
+        <h2>Upcoming Events</h2>
+        <div>
+            <table  class="eventBox" id="event1">
+                <tr>
+                    <th class="eventDate">Oct 18</th>
+                    <th class="eventDetails">The Fillmore Charlotte - Charlotte, NC</th>
+                </tr>
+            </table>
+            <table class="eventBox" id="event2">
+                <tr>
+                    <th class="eventDate">Oct 19</th>
+                    <th class="eventDetails">Coca-Cola Roxy - Atlanta, GA</th>
+            </table>
+            <table class="eventBox" id="event3">
+                </tr>
+                    <th class="eventDate">Oct 20</th>
+                    <th class="eventDetails">Mana Wynwood Convention Center - Miami, FL</th>
+                 </tr>
+            </table>
+        </div>
+        <footer>
+            New Release: Glimpse of Us [Colin Hennerz Remix]
+        </footer>
+        <div id="buttons">
+            <button type="button" id="playButton"></button>
+        </div>
+        <audio id="mytrack">
+            <source src="music/Joji - Glimpse of Us (Hardstyle Remix)-NLRRJXET6gg.mp3" type="audio/mp3">
+        </audio>
+        <script>
+            var mytrack = document.getElementById('mytrack');
+            var playButton = document.getElementById('playButton');
+
+            playButton.onclick = function() {
+                if (mytrack.paused) {
+                    mytrack.play();
+                    playButton.style.backgroundImage = 'url(images/pause.png)';
+                }
+                else {
+                    mytrack.pause();
+                    playButton.style.backgroundImage = 'url(images/play.png)';
+                }
+            }
+        </script>
+    </body>
+</html>
